@@ -90,6 +90,20 @@ st.markdown("""
     </div>
 """, unsafe_allow_html=True)
 
+# Make background of Plotly graphs transparent
+# This needs to be added wherever you define a chart layout:
+# Example:
+# fig.update_layout(paper_bgcolor='rgba(0,0,0,0)', plot_bgcolor='rgba(0,0,0,0)')
+
+# Global layout setting for all Plotly charts
+TRANSPARENT_LAYOUT = dict(
+    paper_bgcolor='rgba(0,0,0,0)',
+    plot_bgcolor='rgba(0,0,0,0)'
+)
+
+# Now whenever you create a figure:
+# fig.update_layout(**TRANSPARENT_LAYOUT)
+
 def metric_block(label, value, color="#00FFAA", border="#00FFAA", prefix="", suffix=""):
     return f"""
     <div style='
