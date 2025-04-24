@@ -41,7 +41,7 @@ st.markdown(
     <div style='
         padding-top: 0.75rem;
         padding-left: 0.5rem;
-        margin-bottom: 0.5rem;
+        margin-bottom: 0.2rem;
     '>
         <h1 style='
             font-size: 2.4rem;
