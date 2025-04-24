@@ -5,7 +5,7 @@ from io import BytesIO
 
 # ✅ Native config with favicon
 st.set_page_config(
-    page_title="ConnexUS AI ROI Calculator",
+    page_title="ConnexUs.AI Calculator",
     page_icon="favicon-32x32.png",  # fallback for native favicon
     layout="wide"
 )
