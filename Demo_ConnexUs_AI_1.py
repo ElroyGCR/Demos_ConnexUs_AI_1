@@ -10,12 +10,16 @@ st.set_page_config(
     layout="wide"
 )
 
-# ✅ Inject favicon manually (for wider browser support)
+# ✅ Inject favicon manually
 with open("favicon-32x32.png", "rb") as f:
     favicon_b64 = base64.b64encode(f.read()).decode("utf-8")
-st.markdown(f"""
+
+st.markdown(
+    f"""
     <link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,{favicon_b64}">
-""", unsafe_allow_html=True)
+    """,
+    unsafe_allow_html=True
+)
 
 # ✅ Load and inject watermark
 with open("connexus_logo_watermark.png", "rb") as f:
