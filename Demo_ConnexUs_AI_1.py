@@ -32,7 +32,7 @@ st.markdown(
     """
     <style>
     .block-container {
-        padding-top: 0rem !important; /* Close the top gap */
+        padding-top: 0rem !important;
     }
     @media (max-width: 768px) {
         .block-container {
@@ -86,6 +86,7 @@ if watermark_b64:
 st.markdown("""
     <div style='padding-top: 0rem;'>
         <h1 style='font-size: 2.4rem; font-weight: 800; margin-bottom: 1.5rem;'>ConnexUS AI ROI Calculator</h1>
+        <hr style='margin-top: -1rem; margin-bottom: 1rem;'>
     </div>
 """, unsafe_allow_html=True)
 
