@@ -49,33 +49,43 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-# ✅ Watermark (behind everything)
-with open("connexus_logo_watermark.png", "rb") as f:
-    data_uri = base64.b64encode(f.read()).decode("utf-8")
-    logo_url = f"data:image/png;base64,{data_uri}"
+# ✅ Load watermark as base64
+def load_watermark_base64(path):
+    try:
+        with open(path, "rb") as f:
+            img = Image.open(f)
+            buffer = BytesIO()
+            img.save(buffer, format="PNG")
+            return base64.b64encode(buffer.getvalue()).decode("utf-8")
+    except Exception:
+        return None
 
-st.markdown(
-    f"""
-    <style>
-    .watermark {{
-        position: fixed;
-        top: 80px;
-        left: calc(540px + 30%);
-        transform: translateX(-50%);
-        height: 800px;
-        width: 850px;
-        z-index: 0;
-        pointer-events: none;
-        background-image: url("{logo_url}");
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size: contain;
-        opacity: 0.15;
-    }}
-    </style>
-    <div class="watermark"></div>
-    """,
-    unsafe_allow_html=True
+watermark_b64 = load_watermark_base64("connexus_logo_watermark.png")
+
+# ✅ Inject watermark CSS if available
+if watermark_b64:
+    st.markdown(
+        f"""
+        <style>
+        .watermark {{
+            position: fixed;
+            top: 80px;
+            left: calc(540px + 30%);
+            transform: translateX(-50%);
+            height: 800px;
+            width: 850px;
+            z-index: 0;
+            pointer-events: none;
+            background-image: url("data:image/png;base64,{watermark_b64}");
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: contain;
+            opacity: 0.15;
+        }}
+        </style>
+        <div class="watermark"></div>
+        """,
+        unsafe_allow_html=True
 )
 
 # ✅ Scalable logo + title header block
