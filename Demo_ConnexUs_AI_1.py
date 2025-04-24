@@ -512,3 +512,8 @@ hr_donut.update_layout(
     margin=dict(t=80, b=40, l=60, r=60)  # 👈 bump top to 80
 )
 st.plotly_chart(hr_donut, use_container_width=True)
+
+# Make background of Plotly graphs transparent
+# This needs to be added wherever you define a chart layout, for example:
+# inv_fig.update_layout(paper_bgcolor='rgba(0,0,0,0)', plot_bgcolor='rgba(0,0,0,0)')
+# pay_fig.update_layout(paper_bgcolor='rgba(0,0,0,0)', plot_bgcolor='rgba(0,0,0,0)')
