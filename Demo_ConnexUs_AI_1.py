@@ -156,9 +156,6 @@ use_indirects    = st.sidebar.checkbox("Include Indirect Value in ROI Calculatio
 use_hr_impact    = st.sidebar.checkbox("Include Strategic HR Savings in ROI", value=False)
 
 # --- MAIN LAYOUT ---
-st.markdown("# ConnexUS AI ROI Calculator")
-st.markdown("### Powered by ConnexUS")  
-st.markdown("---")
 
 # --- 1. Total Monthly Workload ---
 monthly_minutes = weekly_interactions * aht * 4.33
