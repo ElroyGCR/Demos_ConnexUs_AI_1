@@ -87,7 +87,7 @@ if watermark_b64:
         <style>
         .watermark {{
             position: fixed;
-            top: 80px;
+            top: 40px;
             left: calc(540px + 30%);
             transform: translateX(-50%);
             height: 800px;
