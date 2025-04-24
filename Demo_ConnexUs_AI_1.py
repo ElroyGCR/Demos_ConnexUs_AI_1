@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import plotly.graph_objects as go
+import base64
 from PIL import Image
 from io import BytesIO
 
