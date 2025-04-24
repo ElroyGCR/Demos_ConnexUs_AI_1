@@ -5,27 +5,16 @@ from PIL import Image
 from io import BytesIO
 import base64
 
-# ✅ Page setup
-st.set_page_config(
-    page_title="ConnexUS AI ROI Calculator",
-    layout="wide"
-)
-
-# ✅ Inject custom favicon via base64-encoded image
-import base64
-from PIL import Image
-from io import BytesIO
-
 def load_favicon_base64(path):
     try:
         img = Image.open(path)
         buffer = BytesIO()
         img.save(buffer, format="PNG")
         return base64.b64encode(buffer.getvalue()).decode("utf-8")
-    except:
+    except Exception as e:
         return None
 
-favicon_b64 = load_favicon_base64("favicon-32x32.png")  # or favicon.ico if you prefer
+favicon_b64 = load_favicon_base64("favicon-32x32.png")
 
 if favicon_b64:
     st.markdown(
