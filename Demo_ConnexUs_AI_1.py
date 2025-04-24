@@ -2,33 +2,26 @@ import streamlit as st
 import pandas as pd
 import plotly.graph_objects as go
 from PIL import Image
-import base64
+from io import BytesIO
 
-# ✅ Page config
-st.set_page_config(
-    page_title="ConnexUS AI ROI Calculator",
-    layout="wide"
-)
+# Fallback-safe logo loading with PIL
+def load_logo(path):
+    try:
+        with open(path, "rb") as f:
+            img = Image.open(BytesIO(f.read()))
+            return img
+    except Exception:
+        return None
 
-from pathlib import Path
-
-# Light/Dark theme-safe logo path
-theme = st.get_option("theme.base")
-logo_path = "connexus_logo_dark.png" if theme == "light" else "connexus_logo_light.png"
-
-# Fallback logic: safely set final logo
-if Path(logo_path).exists():
-    final_logo = logo_path
-elif Path("connexus_logo.png").exists():
-    final_logo = "connexus_logo.png"
-else:
-    final_logo = None  # prevents crash
+# Use one universal logo
+final_logo_path = "connexus_logo.png"
+logo_img = load_logo(final_logo_path)
 
 # ✅ Scalable logo + title header block
 col1, col2 = st.columns([1, 5])
 with col1:
-    if final_logo:
-        st.image(final_logo, use_container_width=True)
+    if logo_img:
+        st.image(logo_img, use_container_width=True)
     else:
         st.markdown("🚫 Logo not found.")
 with col2:
