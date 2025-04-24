@@ -1,3 +1,5 @@
+# Write the enhanced, production-ready version of app.py with favicon support and theme-safe styling
+enhanced_app_code = '''
 import streamlit as st
 import pandas as pd
 import plotly.graph_objects as go
@@ -81,6 +83,11 @@ if watermark_b64:
         """,
         unsafe_allow_html=True
     )
+
+# --- Placeholder UI Test ---
+st.title("✅ ConnexUS ROI Calculator (Theme-Safe Build)")
+st.write("This is a stable base build with favicon, watermark, and layout enhancements applied.")
+'''
 
 def metric_block(label, value, color="#00FFAA", border="#00FFAA", prefix="", suffix=""):
     return f"""
@@ -507,7 +514,3 @@ hr_donut.update_layout(
     margin=dict(t=80, b=40, l=60, r=60)  # 👈 bump top to 80
 )
 st.plotly_chart(hr_donut, use_container_width=True)
-# --- Placeholder UI Test ---
-st.title("✅ ConnexUS ROI Calculator (Theme-Safe Build)")
-st.write("This is a stable base build with favicon, watermark, and layout enhancements applied.")
-'''
