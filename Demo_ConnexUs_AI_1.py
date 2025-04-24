@@ -24,11 +24,9 @@ st.markdown(
 # ✅ Load and inject watermark
 with open("connexus_logo_watermark.png", "rb") as f:
     watermark_b64 = base64.b64encode(f.read()).decode("utf-8")
-st.markdown(f"""
+st.markdown(
+    f"""
     <style>
-    .block-container {{
-        padding-top: 1rem !important;
-    }}
     .watermark {{
         position: fixed;
         top: 80px;
@@ -46,8 +44,9 @@ st.markdown(f"""
     }}
     </style>
     <div class="watermark"></div>
-""", unsafe_allow_html=True)
-    )
+    """,
+    unsafe_allow_html=True
+)
 
 def metric_block(label, value, color="#00FFAA", border="#00FFAA", prefix="", suffix=""):
     return f"""
