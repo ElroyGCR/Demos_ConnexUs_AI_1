@@ -1,49 +1,90 @@
 import streamlit as st
+import pandas as pd
+import plotly.graph_objects as go
+from PIL import Image
+from io import BytesIO
+import base64
+
+# --- Page Setup ---
 st.set_page_config(page_title="ConnexUS AI ROI Calculator", layout="wide")
 
+# --- Favicon Injection (Base64 Embedded) ---
+def load_favicon_base64(path="favicon-32x32.png"):
+    try:
+        img = Image.open(path)
+        buffer = BytesIO()
+        img.save(buffer, format="PNG")
+        return base64.b64encode(buffer.getvalue()).decode("utf-8")
+    except Exception as e:
+        return None
+
+favicon_b64 = load_favicon_base64()
+if favicon_b64:
+    st.markdown(
+        f"""
+        <link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,{favicon_b64}">
+        """,
+        unsafe_allow_html=True
+    )
+
+# --- Theme-safe Global Styling ---
 st.markdown(
     """
     <style>
     .block-container {
-        padding-top: 1rem !important;  /* Tighten top spacing */
+        padding-top: 1rem !important;
+    }
+    @media (max-width: 768px) {
+        .block-container {
+            padding-left: 0.5rem !important;
+            padding-right: 0.5rem !important;
+        }
     }
     </style>
     """,
     unsafe_allow_html=True
 )
 
-import pandas as pd
-import plotly.graph_objects as go
-from PIL import Image
-import base64
+# --- Watermark Setup ---
+def load_watermark_base64(path="connexus_logo_watermark.png"):
+    try:
+        with open(path, "rb") as f:
+            img = Image.open(f)
+            buffer = BytesIO()
+            img.save(buffer, format="PNG")
+            return base64.b64encode(buffer.getvalue()).decode("utf-8")
+    except:
+        return None
 
-with open("connexus_logo_watermark.png", "rb") as f:
-    data_uri = base64.b64encode(f.read()).decode("utf-8")
-    logo_url = f"data:image/png;base64,{data_uri}"
+watermark_b64 = load_watermark_base64()
+if watermark_b64:
+    st.markdown(
+        f"""
+        <style>
+        .watermark {{
+            position: fixed;
+            top: 80px;
+            left: calc(540px + 30%);
+            transform: translateX(-50%);
+            height: 800px;
+            width: 850px;
+            z-index: 0;
+            pointer-events: none;
+            background-image: url("data:image/png;base64,{watermark_b64}");
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: contain;
+            opacity: 0.15;
+        }}
+        </style>
+        <div class="watermark"></div>
+        """,
+        unsafe_allow_html=True
+    )
 
-st.markdown(
-    f"""
-    <style>
-    .watermark {{
-        position: fixed;
-        top: 80px;  /* raise it higher */
-        left: calc(540px + 30%);  /* shift left, closer to center */
-        transform: translateX(-50%);
-        height: 800px;
-        width: 850px;
-        z-index: 0;
-        pointer-events: none;
-        background-image: url("{logo_url}");
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size: contain;
-        opacity: 0.15;
-    }}
-    </style>
-    <div class="watermark"></div>
-    """,
-    unsafe_allow_html=True
-)
+# --- Title Placeholder ---
+st.title("✅ ConnexUS ROI Calculator (Theme-Safe Base Loaded)")
+st.write("Your full logic and visuals go below this line. The app is now base64 favicon-ready, mobile-responsive, and theme-stable.")
 
 def metric_block(label, value, color="#00FFAA", border="#00FFAA", prefix="", suffix=""):
     return f"""
