@@ -5,16 +5,17 @@ from PIL import Image
 from io import BytesIO
 import base64
 
-def load_favicon_base64(path):
+def load_favicon_base64(path="favicon-32x32.png"):
     try:
         img = Image.open(path)
         buffer = BytesIO()
         img.save(buffer, format="PNG")
         return base64.b64encode(buffer.getvalue()).decode("utf-8")
     except Exception as e:
+        print("Favicon load error:", e)
         return None
 
-favicon_b64 = load_favicon_base64("favicon-32x32.png")
+favicon_b64 = load_favicon_base64()
 
 if favicon_b64:
     st.markdown(
