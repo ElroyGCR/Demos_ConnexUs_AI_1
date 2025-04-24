@@ -2,28 +2,36 @@ import streamlit as st
 import pandas as pd
 import plotly.graph_objects as go
 from PIL import Image
-from pathlib import Path
 from io import BytesIO
-import base64  # ✅ This was missing!
+import base64
 
-# Fallback-safe logo loading with PIL
-def load_logo(path):
+# ✅ Page setup
+st.set_page_config(
+    page_title="ConnexUS AI ROI Calculator",
+    layout="wide"
+)
+
+# ✅ Load logo and convert to base64
+def load_logo_base64(path):
     try:
         with open(path, "rb") as f:
-            img = Image.open(BytesIO(f.read()))
-            return img
-    except Exception:
+            img = Image.open(f)
+            buffer = BytesIO()
+            img.save(buffer, format="PNG")
+            return base64.b64encode(buffer.getvalue()).decode("utf-8")
+    except Exception as e:
         return None
 
-# Use one universal logo
-final_logo_path = "connexus_logo.png"
-logo_img = load_logo(final_logo_path)
+logo_b64 = load_logo_base64("connexus_logo.png")
 
-# ✅ Scalable logo + title header block
+# ✅ Render logo and title layout
 col1, col2 = st.columns([1, 5])
 with col1:
-    if logo_img:
-        st.image(logo_img, use_container_width=True)
+    if logo_b64:
+        st.markdown(
+            f"<img src='data:image/png;base64,{logo_b64}' style='width: 100%; max-width: 180px;'/>",
+            unsafe_allow_html=True
+        )
     else:
         st.markdown("🚫 Logo not found.")
 with col2:
