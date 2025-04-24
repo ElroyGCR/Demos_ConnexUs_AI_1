@@ -82,10 +82,6 @@ if watermark_b64:
         unsafe_allow_html=True
     )
 
-# --- Title Placeholder ---
-st.title("✅ ConnexUS ROI Calculator (Theme-Safe Base Loaded)")
-st.write("Your full logic and visuals go below this line. The app is now base64 favicon-ready, mobile-responsive, and theme-stable.")
-
 def metric_block(label, value, color="#00FFAA", border="#00FFAA", prefix="", suffix=""):
     return f"""
     <div style='
