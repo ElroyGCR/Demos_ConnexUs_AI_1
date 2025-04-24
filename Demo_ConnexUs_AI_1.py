@@ -10,9 +10,15 @@ st.set_page_config(
     layout="wide"
 )
 
-# ✅ Light/Dark theme detection
+# Light/Dark theme-safe logo path
 theme = st.get_option("theme.base")
 logo_path = "connexus_logo_dark.png" if theme == "light" else "connexus_logo_light.png"
+
+# Fallback if logo is missing
+try:
+    st.image(logo_path, use_container_width=True)
+except FileNotFoundError:
+    st.image("connexus_logo.png", use_container_width=True)
 
 # ✅ Top padding fix
 st.markdown(
@@ -58,7 +64,7 @@ st.markdown(
 # ✅ Scalable logo + title header block
 col1, col2 = st.columns([1, 5])
 with col1:
-    st.image(logo_path, use_column_width=True)
+    st.image(logo_path, use_container_width=True)
 with col2:
     st.markdown("## ConnexUS.AI ROI Calculator")
 
