@@ -35,18 +35,36 @@ def load_logo_base64(path):
 
 logo_b64 = load_logo_base64("connexus_logo.png")
 
-# ✅ Render logo and title layout
-col1, col2 = st.columns([1, 5])
+# ✅ Render logo and title layout with left alignment and adjusted spacing
+col1, col2 = st.columns([1, 6])
 with col1:
     if logo_b64:
         st.markdown(
-            f"<img src='data:image/png;base64,{logo_b64}' style='width: 100%; max-width: 180px;'/>",
+            f"<img src='data:image/png;base64,{logo_b64}' style='height: 40px; margin-top: 0.2rem;'/>",
             unsafe_allow_html=True
         )
-    else:
-        st.markdown("🚫 Logo not found.")
+
 with col2:
-    st.markdown("## ConnexUS.AI ROI Calculator")
+    st.markdown(
+        """
+        <div style='
+            display: flex;
+            align-items: flex-end;
+            height: 100%;
+            padding-top: 0.6rem;
+        '>
+            <h1 style='
+                font-size: 2.25rem;
+                font-weight: 700;
+                margin: 0;
+                padding: 0;
+            '>
+                ConnexUS.AI ROI Calculator
+            </h1>
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
 
 # ✅ Top padding fix
 st.markdown(
