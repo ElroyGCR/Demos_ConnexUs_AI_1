@@ -11,6 +11,17 @@ st.set_page_config(
     layout="wide"
 )
 
+# ✅ Remove excess sidebar margin and shift content tighter
+st.markdown(
+    """
+    <style>
+    .css-18e3th9 { padding-left: 0rem !important; }  /* Main container */
+    .css-1d391kg { padding-left: 0.5rem !important; }  /* Sidebar content wrapper */
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
 # ✅ Load logo and convert to base64
 def load_logo_base64(path):
     try:
