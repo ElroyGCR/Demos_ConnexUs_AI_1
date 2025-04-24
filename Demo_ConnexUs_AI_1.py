@@ -6,7 +6,7 @@ from io import BytesIO
 import base64
 
 # --- Page Setup ---
-st.set_page_config(page_title="ConnexUS AI ROI Calculator", page_icon="favicon-32x32.png", layout="wide")
+st.set_page_config(page_title="ConnexUs.AI Calculator", page_icon="favicon-32x32.png", layout="wide")
 
 # --- Favicon Injection (Base64 Embedded) ---
 def load_favicon_base64(path="favicon-32x32.png"):
