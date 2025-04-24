@@ -1,22 +1,32 @@
 import streamlit as st
-st.set_page_config(page_title="ConnexUS AI ROI Calculator", layout="wide")
+import pandas as pd
+import plotly.graph_objects as go
+from PIL import Image
+import base64
 
+# ✅ Page config
+st.set_page_config(
+    page_title="ConnexUS AI ROI Calculator",
+    layout="wide"
+)
+
+# ✅ Light/Dark theme detection
+theme = st.get_option("theme.base")
+logo_path = "connexus_logo_dark.png" if theme == "light" else "connexus_logo_light.png"
+
+# ✅ Top padding fix
 st.markdown(
     """
     <style>
     .block-container {
-        padding-top: 1rem !important;  /* Tighten top spacing */
+        padding-top: 1rem !important;
     }
     </style>
     """,
     unsafe_allow_html=True
 )
 
-import pandas as pd
-import plotly.graph_objects as go
-from PIL import Image
-import base64
-
+# ✅ Watermark (behind everything)
 with open("connexus_logo_watermark.png", "rb") as f:
     data_uri = base64.b64encode(f.read()).decode("utf-8")
     logo_url = f"data:image/png;base64,{data_uri}"
@@ -26,8 +36,8 @@ st.markdown(
     <style>
     .watermark {{
         position: fixed;
-        top: 80px;  /* raise it higher */
-        left: calc(540px + 30%);  /* shift left, closer to center */
+        top: 80px;
+        left: calc(540px + 30%);
         transform: translateX(-50%);
         height: 800px;
         width: 850px;
@@ -44,6 +54,13 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
+
+# ✅ Scalable logo + title header block
+col1, col2 = st.columns([1, 5])
+with col1:
+    st.image(logo_path, use_column_width=True)
+with col2:
+    st.markdown("## ConnexUS.AI ROI Calculator")
 
 def metric_block(label, value, color="#00FFAA", border="#00FFAA", prefix="", suffix=""):
     return f"""
