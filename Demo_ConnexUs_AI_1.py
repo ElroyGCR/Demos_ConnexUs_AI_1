@@ -258,6 +258,8 @@ with col2:
 with col3:
     st.markdown(metric_block("🎯 Total Monthly Value", net_savings + indirect_savings, color="#FFD700", border="#FFD700", prefix="$"), unsafe_allow_html=True)
 
+st.markdown("<hr style='margin-top: -1rem; margin-bottom: 1rem;'>", unsafe_allow_html=True)
+
 # AI Investment Impact
 st.markdown("## 💡 AI Investment Impact")
 st.markdown(caption("Shows how much value is returned for every dollar spent on AI — includes cost savings and indirect gains."), unsafe_allow_html=True)
