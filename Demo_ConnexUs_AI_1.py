@@ -1,9 +1,10 @@
 import streamlit as st
 import pandas as pd
 import plotly.graph_objects as go
-import base64
 from PIL import Image
+from pathlib import Path
 from io import BytesIO
+import base64  # ✅ This was missing!
 
 # Fallback-safe logo loading with PIL
 def load_logo(path):
