@@ -108,7 +108,7 @@ with tabs[0]:
         <script src="https://connexusai.pages.dev/chat-widget.js"
           integrity="vC9YPpJCP1QqkOQ9kePoXmywFRS4mksl4NjUesvWKelztotJiBII+WJuR6TYolgu%"
           data-source-id="Ai-001-Vernon-ACA"
-          data-agent-id="agent_b1ecd31e4cdca318b4224881bb"
+          data-agent-id="agent_86f971e59eebb1f4aa7d972f73"
           data-agent-name="Vernon"
           data-div-id="Vernon-connexUS">
         </script>
@@ -164,7 +164,7 @@ with tabs[2]:
     <script src="https://connexusai.pages.dev/chat-widget.js"
       integrity="vC9YPpJCP1QqkOQ9kePoXmywFRS4mksl4NjUesvWKelztotJiBII+WJuR6TYolgu%"
       data-source-id="Ai-001-HomeLifeShield-Fronter"
-      data-agent-id="agent_262c145e728ec06e0916eb0d2d"
+      data-agent-id="agent_44bd617238512fcb443dbd10f4"
       data-agent-name="Veronica"
       data-div-id="Veronica-connexUS">
     </script>
@@ -192,7 +192,7 @@ with tabs[3]:
     <script src="https://connexusai.pages.dev/chat-widget.js"
       integrity="vC9YPpJCP1QqkOQ9kePoXmywFRS4mksl4NjUesvWKelztotJiBII+WJuR6TYolgu%"
       data-source-id="Ai-001-Noah_HomeLifeShield"
-      data-agent-id="agent_3db37228c59d76eef1f88f501e"
+      data-agent-id="agent_3a1af87a5f8d42d216a2d73b2a"
       data-agent-name="Noah"
       data-div-id="Noah-connexUS">
     </script>
