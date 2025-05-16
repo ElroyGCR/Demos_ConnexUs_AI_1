@@ -91,7 +91,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # ✅ Tabs - this section is now clean
-tabs = st.tabs(["🧠 Vernon","🤖 Joseph Washington","🧠 Amber", "🤖 Abe", "🧠 Alex"])
+tabs = st.tabs(["🧠 Vernon","🤖 Peggy","🧠 Veronica", "🤖 Noah"])
 
 # === Vernon ===
 with tabs[0]:
@@ -121,12 +121,12 @@ with tabs[0]:
         </div>
     """, height=400)
     
-# === Joseph Washington ===
+# === Peggy ===
 with tabs[1]:
     st.markdown(
     f"""
     <h2 class="agent-header">
-        Joseph Washington – CMET EBA Info Agent
+        Peggy – ACA
     </h2>
     """,
     unsafe_allow_html=True
@@ -135,10 +135,10 @@ with tabs[1]:
         <div style="background-color: transparent;">
         <script src="https://connexusai.pages.dev/chat-widget.js"
           integrity="vC9YPpJCP1QqkOQ9kePoXmywFRS4mksl4NjUesvWKelztotJiBII+WJuR6TYolgu%"
-          data-source-id="Ai-001-CMET_Protoype"
-          data-agent-id="agent_2b0e7129bfd9e525ea84bdc902"
-          data-agent-name="Joseph Washington"
-          data-div-id="Joseph Washington-connexUS">
+          data-source-id="Ai-001-Peggy"
+          data-agent-id="agent_49bb00f8bf9e6390138405580d"
+          data-agent-name="Peggy"
+          data-div-id="Peggy-connexUS">
         </script>
         <script>
           window.onload = () => {{
@@ -149,40 +149,12 @@ with tabs[1]:
         </div>
     """, height=400)
 
-# === AMBER ===
-with tabs[2]:
-    st.markdown(
-    f"""
-    <h2 class="agent-header">
-        Amber – Ecampus Prototype
-    </h2>
-    """,
-    unsafe_allow_html=True
-)
-    components.html("""
-    <div style="background-color: transparent;">
-    <script src="https://connexusai.pages.dev/chat-widget.js"
-      integrity="vC9YPpJCP1QqkOQ9kePoXmywFRS4mksl4NjUesvWKelztotJiBII+WJuR6TYolgu%"
-      data-source-id="Ai-001-Ecampus_Protoype"
-      data-agent-id="agent_d8a88fd3d28d15594dbdc0320b"
-      data-agent-name="Amber"
-      data-div-id="Amber-connexUS">
-    </script>
-    <script>
-      window.onload = () => {{
-        ChatWidget.initializeChatWidget();
-        document.body.style.background = "transparent";
-      }};
-    </script>
-    </div>
-    """, height=400)
-
-# === ABE ===
+# === Veronica ===
 with tabs[3]:
     st.markdown(
     f"""
     <h2 class="agent-header">
-        Abe – Info Receptionist
+        Veronica – Home Life Shield Fronter
     </h2>
     """,
     unsafe_allow_html=True
@@ -191,10 +163,10 @@ with tabs[3]:
     <div style="background-color: transparent;">
     <script src="https://connexusai.pages.dev/chat-widget.js"
       integrity="vC9YPpJCP1QqkOQ9kePoXmywFRS4mksl4NjUesvWKelztotJiBII+WJuR6TYolgu%"
-      data-source-id="Ai-001-HonestAbe_InfoReceptionist_Prototype"
-      data-agent-id="agent_4783654b2ef711860c963b7b22"
-      data-agent-name="Abe"
-      data-div-id="Abe-connexUS">
+      data-source-id="Ai-001-HomeLifeShield-Fronter"
+      data-agent-id="agent_262c145e728ec06e0916eb0d2d"
+      data-agent-name="Veronica"
+      data-div-id="Veronica-connexUS">
     </script>
     <script>
       window.onload = () => {{
@@ -205,12 +177,12 @@ with tabs[3]:
     </div>
     """, height=400)
 
-# === ALEX ===
+# === Noah ===
 with tabs[4]:
     st.markdown(
     f"""
     <h2 class="agent-header">
-        Alex - First Choice Home Waranty
+        Noah - Home Life Shield
     </h2>
     """,
     unsafe_allow_html=True
@@ -219,10 +191,10 @@ with tabs[4]:
     <div style="background-color: transparent;">
     <script src="https://connexusai.pages.dev/chat-widget.js"
       integrity="vC9YPpJCP1QqkOQ9kePoXmywFRS4mksl4NjUesvWKelztotJiBII+WJuR6TYolgu%"
-      data-source-id="Ai-001-Alex_FirstChoice_Home_Waranty"
-      data-agent-id="agent_35c7a0d0feba917e94b87a745f"
-      data-agent-name="Alex"
-      data-div-id="Alex-connexUS">
+      data-source-id="Ai-001-Noah_HomeLifeShield"
+      data-agent-id="agent_3db37228c59d76eef1f88f501e"
+      data-agent-name="Noah"
+      data-div-id="Noah-connexUS">
     </script>
     <script>
       window.onload = () => {{
