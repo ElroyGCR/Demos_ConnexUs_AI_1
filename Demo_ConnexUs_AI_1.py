@@ -136,7 +136,7 @@ with tabs[1]:
         <script src="https://connexusai.pages.dev/chat-widget.js"
           integrity="vC9YPpJCP1QqkOQ9kePoXmywFRS4mksl4NjUesvWKelztotJiBII+WJuR6TYolgu%"
           data-source-id="Ai-001-Peggy"
-          data-agent-id="agent_49bb00f8bf9e6390138405580d"
+          data-agent-id="agent_2d4485e336649789b859888a39"
           data-agent-name="Peggy"
           data-div-id="Peggy-connexUS">
         </script>
