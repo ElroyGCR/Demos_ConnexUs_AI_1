@@ -91,14 +91,14 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # ✅ Tabs - this section is now clean
-tabs = st.tabs(["🧠 Sophia Smith","🤖 Joseph Washington","🧠 Amber", "🤖 Abe", "🧠 Alex"])
+tabs = st.tabs(["🧠 Vernon","🤖 Joseph Washington","🧠 Amber", "🤖 Abe", "🧠 Alex"])
 
-# === Sophia Smith ===
+# === Vernon ===
 with tabs[0]:
     st.markdown(
     f"""
     <h2 class="agent-header">
-        Sophia Smith – Sokolove Law
+        Vernon - ACA
     </h2>
     """,
     unsafe_allow_html=True
@@ -107,10 +107,10 @@ with tabs[0]:
         <div style="background-color: transparent;">
         <script src="https://connexusai.pages.dev/chat-widget.js"
           integrity="vC9YPpJCP1QqkOQ9kePoXmywFRS4mksl4NjUesvWKelztotJiBII+WJuR6TYolgu%"
-          data-source-id="Ai-001-Sokolove_Law_Protoype"
-          data-agent-id="agent_d093d7d7e974f7471d88244ffe"
-          data-agent-name="Sophia Smith"
-          data-div-id="Sophia Smith-connexUS">
+          data-source-id="Ai-001-Vernon-ACA"
+          data-agent-id="agent_b1ecd31e4cdca318b4224881bb"
+          data-agent-name="Vernon"
+          data-div-id="Vernon-connexUS">
         </script>
         <script>
           window.onload = () => {{
