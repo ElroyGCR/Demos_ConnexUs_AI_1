@@ -150,7 +150,7 @@ with tabs[1]:
     """, height=400)
 
 # === Veronica ===
-with tabs[3]:
+with tabs[2]:
     st.markdown(
     f"""
     <h2 class="agent-header">
@@ -178,7 +178,7 @@ with tabs[3]:
     """, height=400)
 
 # === Noah ===
-with tabs[4]:
+with tabs[3]:
     st.markdown(
     f"""
     <h2 class="agent-header">
