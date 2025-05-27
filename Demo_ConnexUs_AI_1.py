@@ -91,7 +91,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # ✅ Tabs - this section is now clean
-tabs = st.tabs(["🧠 Vernon","🤖 Peggy","🧠 Veronica", "🤖 Noah"])
+tabs = st.tabs(["🧠 June Cleaver"])
 
 # === Vernon ===
 with tabs[0]:
