@@ -107,10 +107,10 @@ with tabs[0]:
         <div style="background-color: transparent;">
         <script src="https://connexusai.pages.dev/chat-widget.js"
           integrity="vC9YPpJCP1QqkOQ9kePoXmywFRS4mksl4NjUesvWKelztotJiBII+WJuR6TYolgu%"
-          data-source-id="Ai-001-Vernon-ACA"
-          data-agent-id="agent_86f971e59eebb1f4aa7d972f73"
-          data-agent-name="Vernon"
-          data-div-id="Vernon-connexUS">
+          data-source-id="Ai-001-June_Cleaver-PVBM"
+          data-agent-id="agent_5b4c5b84f1b5c8de91b8d00b02"
+          data-agent-name="June Cleaver"
+          data-div-id="June Cleaver-connexUS">
         </script>
         <script>
           window.onload = () => {{
@@ -121,86 +121,3 @@ with tabs[0]:
         </div>
     """, height=400)
     
-# === Peggy ===
-with tabs[1]:
-    st.markdown(
-    f"""
-    <h2 class="agent-header">
-        Peggy – ACA
-    </h2>
-    """,
-    unsafe_allow_html=True
-)
-    components.html("""
-        <div style="background-color: transparent;">
-        <script src="https://connexusai.pages.dev/chat-widget.js"
-          integrity="vC9YPpJCP1QqkOQ9kePoXmywFRS4mksl4NjUesvWKelztotJiBII+WJuR6TYolgu%"
-          data-source-id="Ai-001-Peggy"
-          data-agent-id="agent_2d4485e336649789b859888a39"
-          data-agent-name="Peggy"
-          data-div-id="Peggy-connexUS">
-        </script>
-        <script>
-          window.onload = () => {{
-            ChatWidget.initializeChatWidget();
-            document.body.style.background = "transparent";
-          }};
-        </script>
-        </div>
-    """, height=400)
-
-# === Veronica ===
-with tabs[2]:
-    st.markdown(
-    f"""
-    <h2 class="agent-header">
-        Veronica – Home Life Shield Fronter
-    </h2>
-    """,
-    unsafe_allow_html=True
-)
-    components.html("""
-    <div style="background-color: transparent;">
-    <script src="https://connexusai.pages.dev/chat-widget.js"
-      integrity="vC9YPpJCP1QqkOQ9kePoXmywFRS4mksl4NjUesvWKelztotJiBII+WJuR6TYolgu%"
-      data-source-id="Ai-001-HomeLifeShield-Fronter"
-      data-agent-id="agent_44bd617238512fcb443dbd10f4"
-      data-agent-name="Veronica"
-      data-div-id="Veronica-connexUS">
-    </script>
-    <script>
-      window.onload = () => {{
-        ChatWidget.initializeChatWidget();
-        document.body.style.background = "transparent";
-      }};
-    </script>
-    </div>
-    """, height=400)
-
-# === Noah ===
-with tabs[3]:
-    st.markdown(
-    f"""
-    <h2 class="agent-header">
-        Noah - Home Life Shield
-    </h2>
-    """,
-    unsafe_allow_html=True
-)
-    components.html("""
-    <div style="background-color: transparent;">
-    <script src="https://connexusai.pages.dev/chat-widget.js"
-      integrity="vC9YPpJCP1QqkOQ9kePoXmywFRS4mksl4NjUesvWKelztotJiBII+WJuR6TYolgu%"
-      data-source-id="Ai-001-Noah_HomeLifeShield"
-      data-agent-id="agent_3a1af87a5f8d42d216a2d73b2a"
-      data-agent-name="Noah"
-      data-div-id="Noah-connexUS">
-    </script>
-    <script>
-      window.onload = () => {{
-        ChatWidget.initializeChatWidget();
-        document.body.style.background = "transparent";
-      }};
-    </script>
-    </div>
-    """, height=400)
