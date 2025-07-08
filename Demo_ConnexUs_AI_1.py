@@ -91,14 +91,14 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # ✅ Tabs - this section is now clean
-tabs = st.tabs(["🧠 June Cleaver"])
+tabs = st.tabs(["🧠 Vida"])
 
 # === Vernon ===
 with tabs[0]:
     st.markdown(
     f"""
     <h2 class="agent-header">
-        June Cleaver - PVBM
+        Vida - iPower
     </h2>
     """,
     unsafe_allow_html=True
