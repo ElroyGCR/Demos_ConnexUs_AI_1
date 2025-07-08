@@ -107,10 +107,10 @@ with tabs[0]:
         <div style="background-color: transparent;">
         <script src="https://connexusai.pages.dev/chat-widget.js"
           integrity="vC9YPpJCP1QqkOQ9kePoXmywFRS4mksl4NjUesvWKelztotJiBII+WJuR6TYolgu%"
-          data-source-id="Ai-001-June_Cleaver-PVBM"
-          data-agent-id="agent_5b4c5b84f1b5c8de91b8d00b02"
-          data-agent-name="June Cleaver"
-          data-div-id="June Cleaver-connexUS">
+          data-source-id="Ai-00001-Vida"
+          data-agent-id="agent_9236ed8606d4a2cceab8286dfb"
+          data-agent-name="Vida"
+          data-div-id="Vida-connexUS">
         </script>
         <script>
           window.onload = () => {{
