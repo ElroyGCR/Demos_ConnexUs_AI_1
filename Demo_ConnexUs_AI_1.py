@@ -87,7 +87,7 @@ st.markdown(f"""
 
 # ✅ Title
 st.markdown("""
-<h1 class="responsive-title">Pick the V-Rep you would like to speak with</h1>
+<h1 class="responsive-title"></h1>
 """, unsafe_allow_html=True)
 
 # ✅ Tabs - this section is now clean
